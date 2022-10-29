@@ -1,0 +1,32 @@
+<div *ngFor="let details of userprodile">
+    <section *ngIf="isupdate">
+        <h1>Hi {{details.username}}</h1>
+        <p>{{details.emailid}}</p>
+        <p>{{details.phonenumber}}</p>
+        <p>{{details.password}}</p>
+        <i class="fas fa-user-edit" (click)="view()" style="padding-left: 15px;font-size: larger; "> Update</i>
+    </section>
+    <section *ngIf="!isupdate" class="profile">
+        <h2>{{details.emailid}}</h2>
+        <input [(ngModel)]="details.username">
+        <input [(ngModel)]="details.phonenumber">
+        <input [(ngModel)]="details.password">
+        <p></p>
+        <i class="fas fa-user-edit" (click)="upadte(details)" style="font-size:large;padding-left: 20px;  "> Update profile</i>
+    </section>
+
+
+
+</div>
+
+
+
+
+
+<!-- 
+<mat-toolbar color="primary">Keep
+	<div class="keep-c-toggle-view">
+		<i *ngIf="isNoteView" class="material-icons switchToListView" (click)="view()">view_list</i>
+		<i *ngIf="!isNoteView" class="material-icons switchToNoteView" (click)="view()">view_quilt</i>
+	</div>
+</mat-toolbar> -->

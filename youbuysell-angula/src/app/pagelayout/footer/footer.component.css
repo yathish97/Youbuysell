@@ -1,0 +1,86 @@
+.footerclas{
+    bottom: 0px;
+    width: 100%;
+   
+}
+.lastcard{
+    background-color: #0b1d83;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+.sociallink{
+    color: white;
+   
+}
+
+.clscard{
+ background-color: #C0C0C0;
+
+}
+.clsscomp{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;    
+}
+ul {
+    list-style-type: none;
+    margin-right: 0px auto;
+  }
+a{
+    text-decoration: none;
+    color: black;
+}
+h3{
+    margin: 0px auto;
+    padding: auto;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content:space-between;
+}
+.clsplay{
+    padding-top: 70px;
+}
+@media (min-width: 100px) and (max-width: 503px) 
+{
+    .lastcard{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .clscard{
+        display : none; 
+        visibility : hidden; 
+       
+       }
+
+    
+
+}
+@media (min-width: 503px) and (max-width: 900px) 
+{
+    .lastcard{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .clscard{
+        display : none; 
+        visibility : hidden; 
+       
+       }
+
+    
+
+}
+
+ 
+ 
+
+

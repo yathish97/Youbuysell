@@ -1,0 +1,11 @@
+object scala1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+val a="hello"                                     //> a  : String = hello
+var b=123                                         //> b  : Int = 123
+b=8
+println(b)                                        //> 8
+
+val y=10                                          //> y  : Int = 10
+val x=20                                          //> x  : Int = 20
+val s=s"sum of $x"                                //> s  : String = sum of 20
+}

@@ -1,0 +1,22 @@
+object scala1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+/*val a="hello"
+var b=123
+b=8
+println(b)
+
+val y=10
+val x=20
+val sum=s"sum of $x and $y is ${x+y}"
+
+def add(x:Int,y:Int):Int={x+y}
+val x=10
+val y=20
+val sum=s"sum of $x and $y is ${add(x,y)}"
+
+val a=20.6
+val float=f"value is $a%.2f"
+*/
+val a="hello \n world"                            //> a  : String = hello 
+                                                  //|  world
+}

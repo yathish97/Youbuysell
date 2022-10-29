@@ -1,0 +1,4 @@
+object scala1 {
+  println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
+val a:String="hello"                              //> a  : String = hello
+}

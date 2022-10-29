@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div style="padding-bottom: 25%;">
+<div class="row mt-3 ">
+<div class="clsproduct">
+    
+    <div class="clsallitem">     
+        <section  class="flex">
+       
+        <div class="item">
+            <a (click)="filterproduct('')">
+                <h5>All products</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterproduct('car')">
+                <h5>Cars</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterproduct('bike')">
+                <h5>Bike</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterproduct('Scooters')">
+                <h5>Scooters</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterproduct('CommercialVehicles')">
+                <h5>CommercialVehicles</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterproduct('homes')">
+                <h5>Homes</h5>
+            </a>
+        </div>
+        </section>
+        <div class="flex" >
+            <div class="item">
+                <a (click)="filterproduct('mobile')">
+                    <h5>Mobile</h5>
+                </a>
+            </div>
+            <div class="item">
+                <a (click)="filterproduct('electronics')">
+                    <h5>Electronics</h5>
+                </a>
+            </div>
+        <div class="item">
+            <a (click)="filterproduct('laptop')">
+                <h5>Laptops</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterproduct('furnitures')">
+                <h5>Furnitures</h5>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterproduct('homeappliances')">
+                <h5>Home Appliances</h5>
+            </a>
+        </div>
+
+
+    </div>
+    </div>
+</div>
+</div>
+
+
+<div class="row mt-3 ">
+    <mat-card class="example-card" *ngFor="let item of filterCategory | filter:searchKey:'producttitle'">
+        <img mat-card-image src="{{item.productimage}}" alt="">    
+        <mat-card-content>
+            <p style="font-weight: bold;">{{item.producttitle}}</p>
+            <p>{{item.productdescription}}</p>
+            <p style="font-weight: bold;">cost : <strong>${{item.price}}</strong></p>
+           <button (click)="showintest(item); ">show intrest</button>
+        </mat-card-content>
+        </mat-card>
+        </div>
+
+
+
+

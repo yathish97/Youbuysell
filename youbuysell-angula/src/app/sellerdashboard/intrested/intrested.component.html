@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div  style="padding-bottom: 27%;">
+ 
+    
+        <div  *ngIf="product.length !=0" class="container">
+        <div class="card-table"> 
+        <table  class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Product Name</th>
+                    <th>Product Image</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>buyer</th>
+                    <th>date</th>
+                    <td><button routerLink="/sell" class="btn btn-primary">Sell More</button></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of product; let i = index">
+                    
+                    <td>{{i+1}}</td>
+                    <td class="clstabone"><p>{{item.title}}</p></td>
+                    <td><img src="{{item.image}}" alt=""></td>
+                    <td class="clstabtwo"><p>{{item.productdiscription}}</p></td>
+                    <td class="clstabone">{{item.price}}</td>
+                    <td>{{item.buyerid}} <i style="font-size: larger" (click)="viewbuyerdetails(item)" class="fas fa-info-circle"></i>
+                     
+                        <mat-card (click)="close()"  class="example-card" *ngFor="let user of userprofile;" >
+                            <mat-card-content>
+                                <p>name : {{user.username}}</p>
+                                 <p>phone number : {{user.phonenumber}}</p>
+                               </mat-card-content>
+                            </mat-card>
+                    </td>
+                    <td>{{item.date}} <p>{{item.time}}</p> </td>                  
+             </tbody>        
+            </table>     
+    </div>
+    </div>
+  
+
+    
+<div *ngIf="product.length == 0">
+    <mat-card class="clscard">
+    <mat-card-title> No Intrest Shown</mat-card-title>
+    <div class="center">
+    <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+    <h4 style="font-weight: 400px;">No intrests!</h4>
+    <h6>Add item to it now</h6>
+    <button routerLink="/sell" class="btn btn-primary">sell now</button>
+</div>
+</mat-card></div>
+
+</div>

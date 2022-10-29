@@ -1,0 +1,48 @@
+<p>
+    <mat-toolbar color="primary">
+        <i  class="fas fa-shipping-fast"></i>
+      <strong class="clsh">Ubuysell</strong>
+      <div  style="padding-left: 1%;">
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products"> 
+            <i style="padding-top: 10px;" class="fas fa-search"></i>
+           
+        </div>
+
+          </div> 
+          
+    
+      <span class="example-spacer"  ></span>
+      
+        <i routerLink="/cart" style="font-size: 30px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 9px;" class="badge bg-danger">{{totalItem}}</div>
+
+        <div style="padding-top: 20px;" class="keep-c-toggle-view">
+          <i *ngIf="isNoteView"  mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="fas fa-cog">
+            <div style="padding-top: 20px;">
+              <mat-menu  #menu="matMenu">
+                <button mat-menu-item routerLink="/products">
+                  <i  class="fab fa-stripe-s">hop</i>
+                </button>
+                <button mat-menu-item routerLink="/sell">
+                  <i class="fab fa-sellcast">ell</i>
+                </button>
+                <button mat-menu-item (click)="logout()">
+              <i style="font-size: 20px; padding-right: 10px;" class="fa fa-sign-out" aria-hidden="true"></i>Log out
+          </button>
+          <button mat-menu-item (click)="viewbuyerdetails()">
+            <i style="font-size: 20px;padding-right: 10px;" class="fas fa-user-tie"></i> profile
+          </button>
+        </mat-menu></div>
+        
+    </i>
+          <i *ngIf="!isNoteView" style="font-size: 30px;padding-left: 20px;padding-bottom: 22px;" (click)="login()" class="fas fa-user-circle"></i>
+        </div>     
+      
+    </mat-toolbar>
+  </p>
+
+
+
+
+   

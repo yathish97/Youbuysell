@@ -1,0 +1,36 @@
+<div style="padding-bottom: 20%;">
+    <h1  mat-dialog-title>Add Product</h1>
+    <mat-dialog-content>
+        <div class="parent">
+            <mat-form-field>
+                <input  matInput  placeholder="product id" [(ngModel)]="product.productid"   name="productid"  required>
+                </mat-form-field>
+                <!-- <mat-form-field >
+                <input  matInput  placeholder="seller id" [(ngModel)]="product.sellerid"    name="sellerid"  required>
+                </mat-form-field> -->
+                <mat-form-field>
+                <input  matInput  placeholder="produt title" [(ngModel)]="product.producttitle"   name="producttitle"  required>
+                </mat-form-field>
+                <mat-form-field>
+                <input  matInput  placeholder="product description" [(ngModel)]="product.productdescription"    name="productdescription"  required>
+                </mat-form-field>
+                <mat-form-field>
+                <input  matInput  placeholder="product image" [(ngModel)]="product.productimage"    name="productimage"  required>
+                </mat-form-field>
+                        <div class="container">
+                            <div class ="row padding-200px">
+                                <label>Select Product Category</label>
+                                <select id="category" [(ngModel)]="product.category">
+                                    <option  *ngFor="let c of  categories" [value]="c">{{c}}</option>
+                                  </select>
+                        </div>
+                    </div>
+                <mat-form-field>
+                <input  matInput  placeholder="price" [(ngModel)]="product.price"   name="price"  required>
+                </mat-form-field>
+            </div>    
+</mat-dialog-content>
+<mat-dialog-actions>
+<button  mat-raised-button (click)="sell(product)" [disabled]="!product.productid||!product.producttitle||!product.productdescription||!product.productimage||!product.category||!product.price">Add</button>
+</mat-dialog-actions>
+</div>

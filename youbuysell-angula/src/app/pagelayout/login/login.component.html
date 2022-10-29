@@ -1,0 +1,54 @@
+<div class="clslogin">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div class="clstitle">
+                <mat-card-title>Login/Register</mat-card-title>
+            </div>
+        </mat-card-header>
+        <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="login">
+                <form class="example-form">
+                    {{validateUname() }}
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label> Username</mat-label>
+                        <input matInput placeholder="emailid" class="cname" name="emailid" [formControl]="emailid">
+                       
+                        <mat-icon matSuffix>email</mat-icon>
+                    </mat-form-field>
+                    {{validatePass() }}
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="password" class="cpass" type="password" name=password [formControl]="password">
+                        <mat-icon matSuffix>lock</mat-icon>
+                    </mat-form-field>
+                </form>
+                <button mat-raised-button color="primary" class="button" (click)="login()">login</button>
+            </mat-tab>
+            <mat-tab  label="register">
+             
+                <mat-form-field style="width: 350px" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input class="clsid" matInput [(ngModel)]="usrobj.emailid">
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+                <mat-form-field style="width: 350px" appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input class="clsname" matInput [(ngModel)]="usrobj.username">
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                </mat-form-field>
+                <mat-form-field style="width: 350px" appearance="fill">
+                    <mat-label>phonenumber</mat-label>
+                    <input class="clsid" matInput [(ngModel)]="usrobj.phonenumber">
+                    <mat-icon matSuffix>phonenumber</mat-icon>
+                </mat-form-field>               
+                <mat-form-field style="width: 350px" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input class="clspswd" matInput [(ngModel)]="usrobj.password">
+                    <mat-icon matSuffix>lock</mat-icon>
+                </mat-form-field>
+            
+                <button mat-raised-button class="button" color="primary" (click)="register()" [disabled]="!usrobj.emailid||!usrobj.username||!usrobj.phonenumber||!usrobj.password"> Register</button>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+</div>

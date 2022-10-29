@@ -1,0 +1,108 @@
+.clscard{
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+.center img {
+     
+    height: 162px;
+    width: 250px;
+    margin: 20px;
+}
+.center {
+    position: absolute;
+    top: 25%;
+    left: 41%;
+    text-align: center;
+}
+img{
+    width: 120px;
+    padding: 0px;
+    margin-right: 0px;
+}
+.card-table{
+   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width:600px;
+    word-wrap: break-word;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius:10px;
+   
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  button{
+    width: 110px;
+    font-size:small;
+  }
+  .clstabone{
+    width: 12%;
+  }
+  .clstabtwo{
+    width: 25%;
+  }
+  @media (min-width: 100px) and (max-width: 503px) 
+  {
+      p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 50px;
+        }
+        img{
+          width: 40px;
+         
+        }
+        button{
+            width: 87px;
+            font-size:xx-small;
+        }
+        .clstabone{
+            width: 6%;
+        }
+        .clstabtwo{
+            width: 10%;
+        }
+        .card-table{
+   
+
+            min-width:400px;
+            word-wrap: break-word;
+        }
+  }
+  @media (min-width: 500px) and (max-width: 900px) 
+{
+    p
+    {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+    }
+    img
+    {
+        width: 70px;
+    }
+    .card-table{
+        min-width:900px;
+        word-wrap: break-word;
+    }
+    button{
+        width: 110px;
+        font-size:xx-small;
+    }
+    .clstabone{
+        width: 10%;
+    }
+    .clstabtwo{
+        width: 16%;
+    }
+}

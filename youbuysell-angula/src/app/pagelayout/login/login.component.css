@@ -1,0 +1,34 @@
+.example-card {
+  max-width: 380px;
+}
+.clstitle{
+  text-align: center;
+}
+.example-header-image {
+  background-size: cover;
+}
+.clslogin{
+  background: royalblue;
+    text-align: -webkit-center;
+    padding-top: 150px;
+}
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+.button{
+    color: antiquewhite;
+    background:#3F51B5;
+    width: 200px;
+    height: 30px;
+}
+.clslogin{
+  padding-bottom: 40%;
+}
